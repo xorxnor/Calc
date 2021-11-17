@@ -15,7 +15,7 @@ const changer = (num) => {
 }
 
 const remAll = () => {
-    total.textContent = 0;
+    total.textContent = "";
     leftnum = 0;
     rightnum = 0;
     operation.textContent = "";
@@ -39,15 +39,19 @@ const equalFunc = () => {
     if (operation.textContent == "+") {
         storeRight();
         total.textContent = leftnum + rightnum;
+        leftnum = rightnum;
     } else if (operation.textContent == "-") {
         storeRight();
         total.textContent = leftnum - rightnum;
+        leftnum = rightnum;
     } else if (operation.textContent == "*") {
         storeRight();
         total.textContent = leftnum * rightnum;
+        leftnum = rightnum;
     } else if (operation.textContent == "/") {
         storeRight();
         total.textContent = leftnum / rightnum;
+        leftnum = rightnum;
     }
 }
 
