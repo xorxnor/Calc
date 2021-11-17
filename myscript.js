@@ -71,19 +71,43 @@ const divFunc = () => {
     total.textContent = "";
 }
 
+const styleDown = (div) => {
+    div.style.boxShadow = "1px 2px 1px 1px inset";
+}
+
+const styleUp = (div) => {
+    div.style.boxShadow = "";
+}
+
 let leftnum, rightnum;
 
 buttons.forEach(button => {
     button.addEventListener("click", () => { changer(button.textContent) });
+    button.addEventListener("mousedown", () => { styleDown(button) });
+    button.addEventListener("mouseup", () => { styleUp(button) });
 })
 
 let zer = document.querySelector(".zer").addEventListener("click", () => { changer(0) });
-
+//
 plus.addEventListener("click", () => { addFunc() });
 equals.addEventListener("click", () => { equalFunc() });
 pod.addEventListener("click", () => { divFunc() });
 mul.addEventListener("click", () => { mulFunc() });
 minus.addEventListener("click", () => { minusFunc() });
+// Button Down Style
+plus.addEventListener("mouseup", () => { styleUp(plus) });
+equals.addEventListener("mouseup", () => { styleUp(equals) });
+pod.addEventListener("mouseup", () => { styleUp(pod) });
+mul.addEventListener("mouseup", () => { styleUp(mul) });
+minus.addEventListener("mouseup", () => { styleUp(minus) });
+clear.addEventListener("mouseup", () => { styleUp(clear)});
+// Button Up Style
+plus.addEventListener("mousedown", () => { styleDown(plus) });
+equals.addEventListener("mousedown", () => { styleDown(equals) });
+pod.addEventListener("mousedown", () => { styleDown(pod) });
+mul.addEventListener("mousedown", () => { styleDown(mul) });
+minus.addEventListener("mousedown", () => { styleDown(minus) });
+clear.addEventListener("mousedown", () => { styleDown(clear)});
 
 document.addEventListener("keypress", (e) => {
     console.log(e.code);

@@ -81,6 +81,7 @@ body {
     justify-content: center;
     align-items: center;
     border: 1px #eee solid;
+    user-select: none;
 }
 
 .mul {
