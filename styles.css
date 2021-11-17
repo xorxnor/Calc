@@ -10,8 +10,14 @@ body {
     padding: 1em;
 }
 
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
 .container {
     display: grid;
+    width: 400px;
     grid-template-columns: 100px 100px 100px 100px;
     grid-template-areas:
     "operation opvalue opvalue opvalue"
@@ -20,6 +26,8 @@ body {
     ". . . ."
     "zer minus clr equ";
     justify-content: center;
+    border: 5px #eee solid;
+    border-radius: 15px;
 }
 
 .ttl {
