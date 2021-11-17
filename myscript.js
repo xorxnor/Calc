@@ -85,4 +85,37 @@ pod.addEventListener("click", () => { divFunc() });
 mul.addEventListener("click", () => { mulFunc() });
 minus.addEventListener("click", () => { minusFunc() });
 
+document.addEventListener("keypress", (e) => {
+    console.log(e.code);
+    if (e.code == "Numpad1" || e.code == "Digit1") {
+        total.textContent += 1;
+    } else if (e.code == "Numpad2" || e.code == "Digit2") {
+        total.textContent += 2;
+    } else if (e.code == "Numpad3" || e.code == "Digit3") {
+        total.textContent += 3;
+    } else if (e.code == "Numpad4" || e.code == "Digit4") {
+        total.textContent += 4;
+    } else if (e.code == "Numpad5" || e.code == "Digit5") {
+        total.textContent += 5;
+    } else if (e.code == "Numpad6" || e.code == "Digit6") {
+        total.textContent += 6;
+    } else if (e.code == "Numpad7" || e.code == "Digit7") {
+        total.textContent += 7;
+    } else if (e.code == "Numpad8" || e.code == "Digit8") {
+        total.textContent += 8;
+    } else if (e.code == "Numpad9" || e.code == "Digit9") {
+        total.textContent += 9;
+    } else if (e.code == "NumpadDivide") {
+        divFunc();
+    } else if (e.code == "NumpadMultiply") {
+        mulFunc();
+    } else if (e.code == "NumpadSubtract") {
+        minusFunc();
+    } else if (e.code == "NumpadAdd") {
+        addFunc();
+    } else if (e.code == "NumpadEnter" || e.code == "NumpadEquals") {
+        equalFunc();
+    }
+});
+
 
